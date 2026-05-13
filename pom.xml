@@ -16,7 +16,62 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
+	<!-- This section lists the libraries our Spring Boot project needs -->
 	<dependencies>
+
+		<!-- JPA lets the app work with SQL databases using Java objects -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+			<version>3.2.5</version>
+		</dependency>
+
+		<!-- Web starter lets the app create REST API endpoints -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<version>3.2.5</version>
+		</dependency>
+
+		<!-- Spring Kafka lets the app send and receive Kafka messages -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+			<version>3.1.4</version>
+		</dependency>
+
+		<!-- H2 is a lightweight SQL database used for local development/testing -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>2.2.224</version>
+		</dependency>
+
+		<!-- Spring Boot test provides tools for running automated tests -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>3.2.5</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Spring Kafka test provides testing support for Kafka code -->
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka-test</artifactId>
+			<version>3.1.4</version>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Testcontainers Kafka helps tests run Kafka in a containerized test environment -->
+		<dependency>
+			<groupId>org.testcontainers</groupId>
+			<artifactId>kafka</artifactId>
+			<version>1.19.1</version>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 
 	<build>
